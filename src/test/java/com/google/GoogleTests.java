@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static com.epam.jdi.light.elements.init.UIFactory.$;
 import static org.openqa.selenium.Keys.ENTER;
 
-public class GoogleTests {
+public class GoogleTests implements TestInit {
 
     @Test
     public void searchTest() {

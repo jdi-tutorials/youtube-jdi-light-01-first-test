@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+
+  <CustomLevels>
+    <CustomLevel name="STEP" intLevel="350" />
+  </CustomLevels>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{mm:ss.SS} [%c:%highlight{%level}{INFO=yellow, STEP=bg_blue, ERROR=bg_red}]: %m%n" />
+    </Console>
+    <File name="File" fileName="./target/.logs/${date:yyyyMMdd}Tests.log">
+      <PatternLayout pattern="%d{mm:ss.SS} [%c:%p]: %m%n" />
+    </File>
+  </Appenders>
+
+  <Loggers>
+    <Root level="debug">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+
+</Configuration>
